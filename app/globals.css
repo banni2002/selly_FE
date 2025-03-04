@@ -2,20 +2,237 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+body {
+  font-family: 'Roboto', sans-serif;
+}
+h1{
+  font-size: 32px;
+  line-height: 37.5px;
+  letter-spacing: 0;
+  font-weight: 800;
+  /* color: #2E383F; */
+  text-transform: uppercase;
+}
+h2{
+  font-size: 24px;
+  line-height: 28.13px;
+  font-weight: 700;
+  /* color: #2E383F; */
+  text-transform: uppercase;
+}
+h3, .faq button {
+  font-size: 18px;
+  margin-bottom: 0 !important;
+  font-weight: 700;
+  line-height: 140%;
+}
+p, strong{
+  font-size: 16px;
+  line-height: 140%;
+}
+@media (width >= 1024px) {
+  .lg\:-translate-x-8 {
+    --tw-translate-x: 1rem !important;
+  }
+  .lg\:translate-x-8 {
+    --tw-translate-x: -1rem !important;
+  }
+}
+.button-cta{
+  background-color: #50A4FD;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  width: 100%;
+  position: relative;
+}
+.button-cta.pt{
+  max-width: 395px;
+}
+.button-cta:hover{
+  background-color: #0365FA !important;
+}
+.button-cta svg{
+  height: 24px !important;
+  width: 24px !important;
+  position: absolute;
+  right: 20px;
+  font-weight: 700;
+}
+.faq button:hover{
+  text-decoration: unset;
+}
+.landing-page{
+  background: #f5f5f5;
+}
+.introduce-container, .reward, .success-story, .easy-selling, .partners, .selly-steps, .faq{
+  max-width: 880px;
+}
+.introduce-container .logo{
+  margin-bottom: 30px;
+}
+.introduce-container .card-stars{
+  gap: 10px;
+}
+.introduce-container .card-stars .card{
+  padding: 20px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.introduce-container .card-stars h2, .introduce-container .card-stars p{
+  color: #c36;
+}
+.introduce-container:last-child{
+  padding-bottom: 120px;
+}
+.introduce-container:first-child{
+  padding-top: 200px;
+}
+.introduce{
+  background-image: url('/images/background-introduce.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.partners img{
+  display: inline-block;
+  border-radius: 9999px;
+  margin: 5px;
+}
+.partners .card{
+  border: 1px solid #d7d9de;
+  border-radius: 999px;
+}
+.sign-up{
+  padding-bottom: 10px;
+  border-bottom: 3px solid transparent;
+}
+.sign-up:hover{
+  border-bottom: 3px solid #0365FA;
+}
+.radio-steps{
+  min-width: 24px;
+    min-height: 24px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    margin-right: 16px;
+    position: relative;
+    cursor: pointer;
+    background-image: url('/images/ic-radio.svg');
+}
+footer{
+  background-image: url('/images/background-footer.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.footer-container{
+  padding-top: 130px;
+  padding-bottom: 120px;
+  max-width: 930px;
+}
+.policy{
+  max-width: 850px;
+}
+.left-column{
+  margin-right: 98px;
+}
+.right-column{
+  text-align: right;
+}
+@media (width >= 1024px) {
+  .container {
+      max-width: 1240px;
+  }
+}
+@media (width <= 930px) {
+  .footer-container{
+    max-width: unset;
+    padding: 40px 20px;
+  }
+  .left-column{
+    margin-right: unset;
+    justify-items: center;
+  }
+  .right-column{
+    text-align: center;
+  }
+}
+@media (width <= 768px) {
+  .introduce-container:first-child{
+    padding-top: 130px;
+  }
+  h1{
+    font-size: 24px;
+  }
+  h2{
+    font-size: 20px;
+  }
+  p,strong{
+    font-size: 14px;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }
